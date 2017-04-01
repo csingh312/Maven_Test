@@ -14,11 +14,23 @@ public class exercise1 {
         company = myCompany;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getPlatform() {
+        return platform;
+    }
+
+    public String getCompany() {
+        return company;
+    }
+
     public void showConsole() {
 
-        System.out.println("My name is " + name);
-        System.out.println("My favorite platform is " + platform);
-        System.out.println("It is created by " + company);
+        System.out.println("My name is " + getName());
+        System.out.println("My favorite platform is " + getPlatform());
+        System.out.println("It is created by " + getCompany());
         System.out.println("  ");
     }
 }
