@@ -16,9 +16,9 @@ public class exercise2 {
     }
 
     void showDetail(){
-        System.out.println("First student: " + this.student);
-        System.out.println("First student subject: " + this.subject);
-        System.out.println("First student grade: " + this.grade);
+        System.out.println("Student: " + this.student);
+        System.out.println("Student subject: " + this.subject);
+        System.out.println("Student grade: " + this.grade);
 
     }
 }
