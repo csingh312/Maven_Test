@@ -35,7 +35,7 @@ public class scrapper {
                 Elements table = doc.select("tbody");
                 Elements row = table.select("tr");
                 row.remove(1);
-                for (Element column : row.select("tr")) {
+                for (Element column : row.select("tr[class^=oddrow team], tr[class^=evenrow team]")) {
                     player = column.select("td a strong");
                     team = column.select("td:nth-child(2) > ul > li > p.team-name");
                     school = column.select("td:nth-child(7) > ul > li > p");
@@ -62,9 +62,9 @@ public class scrapper {
                     System.out.println("Inserted Successfully");
                 }
                 //Delete rows with no data
-                Statement cleanup = con.createStatement();
-                String cleanData ="delete from nba_draft_2017 where FULL_NAME = ' '";
-                cleanup.executeUpdate(cleanData);
+//                Statement cleanup = con.createStatement();
+//                String cleanData ="delete from nba_draft_2017 where FULL_NAME = ' '";
+//                cleanup.executeUpdate(cleanData);
             } catch (Exception e) {
                 System.err.println("Got an exception! ");
                 System.err.println(e.getMessage());
