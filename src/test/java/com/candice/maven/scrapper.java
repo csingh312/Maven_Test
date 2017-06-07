@@ -12,7 +12,7 @@ public class scrapper {
     public static void main(String[] args) throws IOException, SQLException {
         String url = "http://insider.espn.com/nba/draft/rounds/_/round/x/year/2016";
 
-        // connect to MySQL Database
+        //connect to MySQL Database
         Connection con = ConnectionManager.getConnection();
 
         //Truncate table
@@ -61,7 +61,7 @@ public class scrapper {
                     }
                     System.out.println("Inserted Successfully");
                 }
-                // Delete rows with no data
+                //Delete rows with no data
                 Statement cleanup = con.createStatement();
                 String cleanData ="delete from nba_draft_2017 where FULL_NAME = ' '";
                 cleanup.executeUpdate(cleanData);
