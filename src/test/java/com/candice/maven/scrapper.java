@@ -61,10 +61,6 @@ public class scrapper {
                     }
                     System.out.println("Inserted Successfully");
                 }
-                //Delete rows with no data
-//                Statement cleanup = con.createStatement();
-//                String cleanData ="delete from nba_draft_2017 where FULL_NAME = ' '";
-//                cleanup.executeUpdate(cleanData);
             } catch (Exception e) {
                 System.err.println("Got an exception! ");
                 System.err.println(e.getMessage());
